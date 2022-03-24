@@ -1,0 +1,25 @@
+<h2>Log in</h2>
+<!-- <div class="alert alert-<?php echo $success === true ? 'success' : 'danger'; ?>">
+    <?php //echo isset($message)?$message:''; ?>
+</div> -->
+
+<?php echo $this->tag->form(""); ?>
+
+<p>
+    <label for="email">email</label>
+    <?php echo $this->tag->emailField("email"); ?>
+</p>
+<p>
+    <label for="password">password</label>
+    <?php echo $this->tag->passwordField("password"); ?>
+</p>
+<p>
+    <label for="checkbox">Remember me</label>
+    <?php echo $this->tag->checkField("checkbox"); ?>
+</p>
+<?php echo $this->tag->submitButton("Login"); ?>
+
+<p>
+    <?php echo $this->session->get('login'); ?>
+</p>
+</form>
